@@ -35,6 +35,12 @@ pipeline {
                 sh 'mvn test'
             }
         }
+        stage('Verify') {
+            steps {
+                echo "Running mvn verify..."
+                sh 'mvn verify'
+            }
+        }
 
         // stage('SonarQube Analysis') {
         //     steps {
